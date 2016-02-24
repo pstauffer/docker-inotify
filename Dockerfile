@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM pstauffer/curl:latest
 
 MAINTAINER pstauffer@confirm.ch
 
@@ -7,7 +7,7 @@ MAINTAINER pstauffer@confirm.ch
 #
 
 RUN apk --update upgrade && \
-    apk add --update curl && \
+    apk add --update inotify-tools && \
     rm -rf /var/cache/apk/*
 
 
@@ -22,8 +22,6 @@ RUN chmod 750 /init.sh
 #
 # Define container settings.
 #
-
-USER nobody
 
 WORKDIR /tmp
 
