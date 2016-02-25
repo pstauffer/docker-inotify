@@ -2,6 +2,8 @@
 
 ## Description
 
+This docker image runs a [inotify](https://github.com/rvoicilas/inotify-tools/wiki) service based on [Alpine Linux](https://hub.docker.com/_/alpine/).
+
 
 ## Usage
 
