@@ -65,3 +65,7 @@ curl -X POST --unix-socket /var/run/docker.sock http:/containers/bind/stop
 # send a signal to a container
 curl -X POST --unix-socket /var/run/docker.sock http:/containers/bind/kill?signal=SIGHUP
 ```
+
+
+## License
+This project is licensed under `MIT <http://opensource.org/licenses/MIT>`_.
