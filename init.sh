@@ -14,7 +14,7 @@ INOTIFY_OPTONS_DEFAULT='--monitor --exclude=*.sw[px]'
 # Display settings on standard out.
 #
 echo "inotify settings"
-echo "=============="
+echo "================"
 echo
 echo "  Container:        ${CONTAINER}"
 echo "  Volumes:          ${VOLUMES}"
