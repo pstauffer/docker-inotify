@@ -4,6 +4,7 @@
 
 This docker image runs a [inotify](https://github.com/rvoicilas/inotify-tools/wiki) service based on [Alpine Linux](https://hub.docker.com/_/alpine/).
 
+[![](https://images.microbadger.com/badges/image/pstauffer/inotify.svg)](https://microbadger.com/images/pstauffer/inotify)
 
 ## Usage
 
