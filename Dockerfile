@@ -1,4 +1,4 @@
-FROM pstauffer/curl:latest
+FROM pstauffer/curl:v1.0.3
 
 MAINTAINER pstauffer@confirm.ch
 
