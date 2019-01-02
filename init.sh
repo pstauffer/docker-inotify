@@ -8,7 +8,7 @@ set -e
 CURL_OPTIONS_DEFAULT=
 SIGNAL_DEFAULT="SIGHUP"
 INOTIFY_EVENTS_DEFAULT="create,delete,modify,move"
-INOTIFY_OPTONS_DEFAULT='--monitor --exclude=*.sw[px]'
+INOTIFY_OPTONS_DEFAULT='--monitor'
 
 #
 # Display settings on standard out.
@@ -33,5 +33,5 @@ inotifywait -e ${INOTIFY_EVENTS} ${INOTIFY_OPTONS} "${VOLUMES}" | \
     do
     	echo "$notifies"
         echo "notify received, sent signal ${SIGNAL} to container ${CONTAINER}"
-        curl ${CURL_OPTIONS} -X POST --unix-socket /var/run/docker.sock http:/containers/${CONTAINER}/kill?signal=${SIGNAL} > /dev/stdout 2> /dev/stderr
+        curl ${CURL_OPTIONS} -X POST --unix-socket /var/run/docker.sock http:/containers/${CONTAINER}/restart?t=${TIME} > /dev/stdout 2> /dev/stderr
     done

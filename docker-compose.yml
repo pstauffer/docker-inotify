@@ -3,7 +3,7 @@ inotify:
   container_name: 'inotify'
 
   volumes:
-  - '/var/run/docker.sock:/tmp/docker.sock:ro'
+  - '/var/run/docker.sock:/var/run/docker.sock:ro'
   - '/var/lib/docker/data/bind/config:/config'
   - '/var/lib/docker/data/bind/data:/data'
 
