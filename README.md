@@ -37,8 +37,8 @@ docker-compse up -d
 For debug propose it's possible to pass additional curl options into the container. Just set the environment variable `CURL_OPTIONS=-v`.
 
 
-### Signal
-The default signal is `SIGHUP`. This behaviour can be overwritten, if you set the environment variable `SIGNAL=<signal>`.
+### Countdown
+A count-down timer can be provided when asking the runtime to restart the container. The time to wait (in seconds) before restarting the container is controlled with the environment variable `TIME=<seconds>`.
 
 
 ### Inotify Events
