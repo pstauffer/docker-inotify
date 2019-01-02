@@ -33,5 +33,5 @@ inotifywait -e ${INOTIFY_EVENTS} ${INOTIFY_OPTONS} "${VOLUMES}" | \
     do
     	echo "$notifies"
         echo "notify received, sent signal ${SIGNAL} to container ${CONTAINER}"
-        curl ${CURL_OPTIONS} -X POST --unix-socket /var/run/docker.sock http:/containers/${CONTAINER}/kill?signal=${SIGNAL} > /dev/stdout 2> /dev/stderr
+        curl ${CURL_OPTIONS} -X POST --unix-socket /var/run/docker.sock http:/containers/${CONTAINER}/restart?t=${TIME} > /dev/stdout 2> /dev/stderr
     done
