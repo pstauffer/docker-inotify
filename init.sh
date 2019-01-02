@@ -8,7 +8,7 @@ set -e
 CURL_OPTIONS_DEFAULT=
 SIGNAL_DEFAULT="SIGHUP"
 INOTIFY_EVENTS_DEFAULT="create,delete,modify,move"
-INOTIFY_OPTONS_DEFAULT='--monitor --exclude=*.sw[px]'
+INOTIFY_OPTONS_DEFAULT='--monitor'
 
 #
 # Display settings on standard out.
